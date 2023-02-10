@@ -1,13 +1,15 @@
 
 <?php
 // User class definition
-class User {
+class User
+{
   // Private member variables
   private $name;
   private $age;
 
   // Method to set the name of a user
-  public function setName($name) {
+  public function setName($name)
+  {
     // Trim white spaces from the name
     $name = trim($name);
     // Validate the length of the name and throw an exception if it is less than 3 characters
@@ -15,11 +17,12 @@ class User {
       throw new Exception("The name should be at least 3 characters long");
     }
     // Set the name for the user
-    $this -> name = $name;
+    $this->name = $name;
   }
 
   // Method to set the age of a user
-  public function setAge($age) {
+  public function setAge($age)
+  {
     // Cast the age to an integer type
     $age = (int)$age;
     // Validate the age and throw an exception if it is zero or less
@@ -27,29 +30,32 @@ class User {
       throw new Exception("The age cannot be zero or less");
     }
     // Set the age for the user
-    $this -> age = $age;
+    $this->age = $age;
   }
 
   // Method to get the name of a user
-  public function getName() {
-    return $this -> name;
+  public function getName()
+  {
+    return $this->name;
   }
 
   // Method to get the age of a user
-  public function getAge() {
-    return $this -> age;
+  public function getAge()
+  {
+    return $this->age;
   }
 }
 
 // Function to test the User class
-function test() {
+function test()
+{
   // An array of data for different users
   $dataForUsers = array(
-    array("Ben",4),
-    array("Eva",28),
-    array("li",29),
-    array("Catie","not yet born"),
-    array("Sue",1.5)
+    array("Ben", 4),
+    array("Eva", 28),
+    array("li", 29),
+    array("Catie", "not yet born"),
+    array("Sue", 1.5)
   );
 
   // Loop through the data of each user
